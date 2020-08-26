@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-9</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        /* navbar */
+        
+        .header {
+            width: 100%;
+            height: 70px;
+            background-color: black;
+            padding: 0px 20px;
+            position: fixed;
+            top: 0px;
+        }
+        
+        .header h2 {
+            line-height: 70px;
+            float: left;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        
+        .menu {
+            list-style: none;
+            text-align: center;
+        }
+        
+        .menu li {
+            display: inline-block;
+            margin: 13px 60px;
+            padding: 11px 10px;
+        }
+        
+        .menu a:hover {
+            color: black;
+            background-color: white;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            color: white;
+        }
+        /* banner */
+        
+        .banner img {
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .banner h1 {
+            position: absolute;
+            padding-left: 10px;
+            padding-top: 10px;
+            color: white;
+        }
+        /* Team Members */
+        
+        .team h1 {
+            text-align: center;
+        }
+        
+        .team img {
+            position: relative;
+            left: 8%;
+            border-radius: 100%;
+            margin: 0px 48px;
+        }
+        /* about us */
+        
+        .about {
+            text-align: center;
+            width: 90%;
+            margin: auto;
+        }
+        
+        .project {
+            display: flex;
+        }
+        
+        .project .ab {
+            width: 50%;
+            font-size: 25px;
+            background-color: grey;
+            color: white;
+            /* height: 80vh; */
+        }
+        
+        .project .ab h3 {
+            margin-top: 6px;
+            margin-bottom: 26px;
+            margin-left: 8px;
+            text-align: left;
+        }
+        
+        .ab p {
+            text-align: left;
+            padding: 10px;
+        }
+        
+        .project .pro {
+            width: 50%;
+            /* height: 82vh; */
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+        }
+        
+        .project .pro h2 {
+            margin-bottom: 15px;
+            height: 33vh;
+            font-size: 28px;
+        }
+        
+        #pr1 {
+            background-image: url('..//img/p-8-b1.jpg');
+        }
+        
+        #pr2 {
+            background-image: url('..//img/p-8-b2.jpeg');
+        }
+        
+        #pr3 {
+            background-image: url('..//img/p-8-b3.jpg');
+        }
+        /* Technologies */
+        
+        .box {
+            background: white;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20.5px;
+            transition: transform .2s;
+        }
+        
+        .box:hover {
+            transform: scale(1.1);
+        }
+        
+        .box a {
+            padding: 10px 20px;
+            background-color: red;
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            width: 240px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        
+        .box a:hover {
+            color: white;
+            background-color: blue;
+        }
+        
+        #button1 {
+            padding: 10px 20px;
+            background-color: black;
+            color: aliceblue;
+            text-decoration: none;
+            display: inline-block;
+            width: 200px;
+            margin-right: 20px;
+            text-align: center;
+        }
+        
+        #button1:hover {
+            border: 1px solid black;
+            color: black;
+            background-color: white;
+        }
+        /* footer */
+        
+        .footer {
+            text-align: center;
+            background-color: violet;
+            padding: 22px 0px;
+        }
+        
+        .footer p {
+            padding: 12px 0px;
+        }
+        
+        .footer a {
+            text-decoration: none;
+            border: 1px solid black;
+            padding: 5px;
+            color: white;
+            border-radius: 10px;
+            background-color: black;
+            transition: 0.4s;
+        }
+        
+        .footer a:hover {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="navbar" class="header">
+
+        <ul class="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#aboutUs">ABOUT US</a></li>
+            <li><a href="#members">TEAM</a></li>
+            <li><a href="#technologies">TECHNOLOGIES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+
+        </ul>
+    </div>
+    <br><br>
+    <div class="banner">
+        <h1>PRACTICAL-8</h1>
+        <img src="..//img/p-8-0.jpg" alt="banner">
+    </div>
+    <br><br><br><br>
+    <div id="members" class="team">
+        <div class="name">
+            <h1>Team Members</h1>
+            <br>
+        </div>
+        <img src="..//img/p-8-1.png" alt="">
+        <img src="..//img/p-8-2.png" alt="">
+        <img src="..//img/p-8-3.png" alt="">
+        <img src="..//img/p-8-4.png" alt="">
+
+    </div>
+    <br><br><br><br>
+    <div id="aboutUs" class="about">
+        <div>
+            <h1>About Us</h1>
+            <br>
+        </div>
+        <div class="project">
+            <div class="ab">
+                <h3>About Projects</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto neque saepe placeat officia animi incidunt labore exercitationem alias eaque deleniti quasi ab, odio assumenda sit hic? Ad maxime autem harum.Odio necessitatibus sed commodi, molestiae at
+                    sunt repellendus assumenda, exercitationem eaque aspernatur asperiores, quod aperiam ipsa. Veritatis eos assumenda quod odio corporis. At consequuntur eum distinctio nobis non vitae eveniet. Maiores odit delectus architecto, tempore
+                    dolore facilis ipsum officia reprehenderit mollitia vero ea,pariatur rerum praesentium libero. Iure consequatur quae cum praesentium libero modi unde minuseligendi! Libero, quaerat ad? Dicta cumque hperferendis earum rerum molestias
+                    quaerat debitis vero eaque ipsa, adipisci nullpariatur.Inventore libero commodi architecto consequuntur autem nihil nostrum sunt, animi saofficiasuscipitsequi est itaque repellendus excepturi iure vero neque laborum. Quasi ducimus
+                    beatae provident placeateligendi! Libero, quaerat ad?Dicta cumque hperferendis earum rerum molestias quaerat debitis vero eaque ipsaadipisci nullapariatur.Inventore libero commodi architecto consequuntur autem nihil nostrum sunt, animi
+                    saepofficiasuscipisequi est itaque repellendus excepturi iure vero ne</p>
+            </div>
+            <div class="pro">
+                <h2 id="pr1">Project-1</h2>
+                <h2 id="pr2">Project-2</h2>
+                <h2 id="pr3">Project-3</h2>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+    <div id="technologies" class="techy">
+        <h1>Technologies Used</h1>
+        <div style="display: inline-block; float: left; margin: 30px">
+            <div class="box" style="box-shadow: 5px 10px 18px #888888">
+                <div>
+                    <img alt="HTML !!!" height="183" src="../img/html.png" style="border-radius: 10px" width="275">
+                </div>
+                <h3 style="text-align: center">Introduction to HTML</h3>
+                <p style="width: 275px; text-align: justify; font-size: 5mm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa dignissimos dolores eaque id itaque quaerat quis repellendus ut voluptatibus.
+                </p>
+                <p style="text-align: center;"><a href="../practical-5/html.html"><b>Read More</b></a></p>
+            </div>
+
+            <div class="box" style="box-shadow: 5px 10px 18px #888888">
+                <div>
+                    <img alt="CSS !!!" height="183" src="../img/css.jpg" style="border-radius: 10px" width="275">
+                </div>
+                <h3 style="text-align: center">Introduction to CSS</h3>
+                <p style="width: 275px; text-align: justify; font-size: 5mm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa dignissimos dolores eaque id itaque quaerat quis repellendus ut voluptatibus.
+                </p>
+                <p style="text-align: center;"><a href="../practical-5/css.html"><b>Read More</b></a></p>
+
+            </div>
+
+            <div class="box" style="box-shadow: 5px 10px 18px #888888">
+                <div>
+                    <img alt="JavaScript !!!" height="183" src="../img/js.jpg" style="border-radius: 10px" width="275">
+                </div>
+                <h3 style="text-align: center">Introduction to JavaScript</h3>
+                <p style="width: 275px; text-align: justify; font-size: 5mm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa dignissimos dolores eaque id itaque quaerat quis repellendus ut voluptatibus.
+                </p>
+                <p style="text-align: center;"><a href="../practical-5/javascript.html"><b>Read More</b></a></p>
+
+            </div>
+
+            <div class="box" style="box-shadow: 5px 10px 18px #888888">
+                <div>
+                    <img alt="Bootstrap !!!" height="183" src="../img/bootsrap.jpg" style="border-radius: 10px" width="275">
+                </div>
+                <h3 style="text-align: center">Introduction to Bootstrap</h3>
+                <p style="width: 275px; text-align: justify; font-size: 5mm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa dignissimos dolores eaque id itaque quaerat quis repellendus ut voluptatibus.
+                </p>
+                <p style="text-align: center;"><a href="../practical-5/bootsrap.html"><b>Read More</b></a></p>
+
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <h1>Contact</h1>
+        <br>
+        <div id="contact" class="footer">
+            <p>Website Template for Practical-8 &copy <a href="">BETA-labs</a> </p>
+            <a href="#navbar">Back to Top</a>
+        </div>
+
+</body>
+
+</html>

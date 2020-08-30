@@ -8,50 +8,67 @@
     <title>Practical-9</title>
     <style>
         * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
             scroll-behavior: smooth;
         }
         
-        h1 {
-            text-align: center;
+        #container {
+            margin: 8px;
         }
-        /* navbar */
         
-        .header {
-            width: 100%;
-            height: 70px;
-            background-color: rgb(85, 79, 79);
-            padding: 0px 20px;
+        #header {
+            background-color: grey;
+            color: white;
+            line-height: 70px;
             position: sticky;
             top: 0px;
         }
         
-        .header .menu {
-            list-style: none;
-            float: center;
+        .menu {
+            float: right;
+            list-style-type: none;
         }
         
         .menu li {
             display: inline-block;
-            margin: 13px 60px;
-            padding: 11px 10px;
             line-height: 70px;
-        }
-        
-        .menu a:hover {
-            color: black;
-            background-color: white;
+            position: relative;
         }
         
         .menu li a {
             text-decoration: none;
             font-size: 20px;
-            text-transform: uppercase;
-            padding: 0px 20px;
+            padding: 20px;
             color: white;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+        
+        .menu li a:hover,
+        .show-btn:hover,
+        .hide-btn:hover {
+            background-color: grey;
+            color: lightskyblue;
+            transition: 0.4;
+        }
+        
+        .show-btn {
+            float: right;
+            font-size: 20px;
+            margin-right: 30px;
+        }
+        
+        #chk {
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
         }
         
         .show-btn,
@@ -59,160 +76,310 @@
             font-size: 30px;
             color: white;
             line-height: 70px;
-        }
-        /* banner */
-        
-        .banner img {
-            width: 100%;
-            height: 100vh;
+            display: none;
         }
         
-        .banner h1 {
-            position: absolute;
-            padding-left: 10px;
-            padding-top: 10px;
+        #header::after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+        
+        #banner {
+            height: 700px;
+            background-color: lightblue;
+            background-image: url(..//img/p-8-0.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             color: white;
-        }
-        /* Team Members */
-        
-        .team h1 {
-            text-align: center;
+            margin-top: 2%;
         }
         
-        .team img {
-            position: relative;
-            left: 8%;
-            border-radius: 100%;
-            margin: 0px 48px;
-        }
-        /* about us */
-        
-        .about {
-            text-align: center;
-            width: 90%;
-            margin: auto;
+        #section1 {
+            font-size: 16px;
+            color: black;
+            /* border: 2px solid blue; */
         }
         
-        .project {
+        #image1 {
+            /* border: 1px solid red; */
             display: flex;
+            align-content: space-around;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
         
-        .project .ab {
+        .image {
+            display: inline-block;
+            /* border: 1px solid black; */
+            width: 20%;
+            /* margin: 0px 2px 0px 27px; */
+            /* margin-right: 20px; */
+            padding: 20px;
+        }
+        
+        .image img {
+            width: 100%;
+            border-radius: 400px;
+            display: inline-block;
+        }
+        
+        #section2 {
+            color: black;
+            margin-bottom: 5%;
+        }
+        
+        .content {
+            display: flex;
+            height: auto;
+        }
+        
+        .main-content {
             width: 50%;
-            font-size: 25px;
+            height: 500px;
             background-color: grey;
+            font-size: 18px;
             color: white;
-            /* height: 80vh; */
+            padding: 10px;
+            text-align: justify;
         }
         
-        .project .ab h3 {
-            margin-top: 6px;
-            margin-bottom: 26px;
-            margin-left: 8px;
-            text-align: left;
+        .main-content h2 {
+            height: 60px;
         }
         
-        .ab p {
-            text-align: left;
+        .right {
+            width: 50%;
+            margin-left: 5px;
+        }
+        
+        .article {
+            height: 160px;
+            background-color: orange;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .article img {
+            width: 100%;
+            height: 160px;
+        }
+        
+        #section3 {
+            color: black;
+            padding: 0px 20px;
+        }
+        
+        .content1 {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        
+        .contain {
+            width: 20%;
+            background-color: lightgray;
+        }
+        
+        .htm img {
+            border-radius: 8px;
+            height: 150px;
+        }
+        
+        .htm p {
+            text-align: justify;
             padding: 10px;
         }
         
-        .project .pro {
-            width: 50%;
-            /* height: 82vh; */
-            display: flex;
-            flex-direction: column;
-            margin-left: 15px;
-        }
-        
-        .project .pro h2 {
-            margin-bottom: 15px;
-            height: 33vh;
-            font-size: 28px;
-        }
-        
-        #pr1 {
-            background-image: url('..//img/p-8-b1.jpg');
-        }
-        
-        #pr2 {
-            background-image: url('..//img/p-8-b2.jpeg');
-        }
-        
-        #pr3 {
-            background-image: url('..//img/p-8-b3.jpg');
-        }
-        /* Technologies */
-        
-        .box {
-            background: white;
-            display: inline-block;
-            border-radius: 10px;
-            padding: 18px;
-            margin: 20.5px;
-            transition: transform .2s;
-        }
-        
-        .box:hover {
-            transform: scale(1.1);
-        }
-        
-        .box a {
-            padding: 10px 20px;
-            background-color: red;
-            color: white;
-            display: inline-block;
+        .htm a {
+            display: block;
             text-decoration: none;
-            width: 240px;
+            background-color: red;
             text-align: center;
-            border-radius: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+            padding: 4px;
+            color: white;
         }
         
-        .box a:hover {
-            color: white;
+        a:hover {
             background-color: blue;
         }
         
-        #button1 {
-            padding: 10px 20px;
-            background-color: black;
-            color: aliceblue;
-            text-decoration: none;
-            display: inline-block;
-            width: 200px;
-            margin-right: 20px;
-            text-align: center;
-        }
-        
-        #button1:hover {
-            border: 1px solid black;
+        #section4 {
+            font-size: 16px;
             color: black;
-            background-color: white;
         }
-        /* footer */
         
-        .footer {
-            text-align: center;
+        #footer {
             background-color: violet;
-            padding: 22px 0px;
+            padding: 20px;
+            color: black;
+            text-align: center;
         }
         
-        .footer p {
-            padding: 12px 0px;
+        @media screen and (max-width: 1119px) and (min-width: 801px) {
+            #banner {
+                height: 500px;
+            }
+            .content1 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .contain {
+                width: 45%;
+                margin-bottom: 5%;
+            }
+            .image {
+                width: 40%;
+            }
         }
         
-        .footer a {
-            text-decoration: none;
-            border: 1px solid black;
-            padding: 5px;
-            color: white;
-            border-radius: 10px;
-            background-color: black;
-            transition: 0.4s;
+        @media screen and (max-width: 800px) and (min-width: 625px) {
+            #banner {
+                height: 400px;
+            }
+            .menu li {
+                display: none;
+            }
+            .show-btn,
+            .hide-btn {
+                display: block;
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                background-color: black;
+                width: 100%;
+                height: 400px;
+                text-align: center;
+                padding: 60px 0px 40px 0px;
+                right: -100%;
+                transition: 0.7s;
+            }
+            .menu li {
+                display: block;
+                /* padding: 20px 0; */
+            }
+            .menu li a {
+                display: block;
+                padding: 5px;
+            }
+            .hide-btn {
+                position: absolute;
+                top: 10px;
+                right: 30px;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .main-content {
+                width: 100%;
+            }
+            .right {
+                width: 100%;
+                margin: 10px 0px 0px 0px;
+            }
+            #image1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: unset;
+                align-content: unset;
+            }
+            .image {
+                width: 100%;
+                text-align: center;
+            }
+            .image img {
+                width: 60%;
+            }
+            .content1 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .contain {
+                width: 44%;
+                margin-bottom: 5%;
+            }
         }
         
-        .footer a:hover {
-            font-size: 20px;
+        @media screen and (max-width: 624px) {
+            #banner {
+                height: 300px;
+            }
+            .menu li {
+                display: none;
+            }
+            .show-btn,
+            .hide-btn {
+                display: block;
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                background-color: black;
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding: 60px 0px 0px 0px;
+                right: -100%;
+                transition: 0.7s;
+            }
+            .menu li {
+                display: block;
+                /* padding: 20px 0; */
+            }
+            .menu li a {
+                display: block;
+            }
+            .menu li a {
+                padding: 5px;
+            }
+            .hide-btn {
+                position: absolute;
+                top: 5px;
+                right: 35px;
+            }
+            #chk:checked~.menu {
+                right: 0;
+            }
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .main-content {
+                width: 100%;
+            }
+            .right {
+                width: 100%;
+                margin-top: 10px;
+            }
+            .content1 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .contain {
+                width: 100%;
+                margin-bottom: 5%;
+            }
+            #image1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: unset;
+                align-content: unset;
+            }
+            .image {
+                width: 100%;
+                text-align: center;
+            }
+            .image img {
+                width: 60%;
+            }
         }
     </style>
 
@@ -241,7 +408,7 @@
         </div>
 
         <div id="banner">
-            <h1 style="padding: 20px;">PRACTICAL - 8</h1>
+            <h1 style="padding: 20px;">PRACTICAL - 9</h1>
         </div>
         <div id="section1">
             <br><br><br><br><br>

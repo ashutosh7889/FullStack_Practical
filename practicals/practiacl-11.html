@@ -4,7 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Practical-11</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        table {
+            width: 80%;
+            margin: 50px auto;
+            border: 3px solid #2f3640;
+            border-collapse: collapse;
+            font-size: 17px;
+            /* border-radius: 10px; */
+        }
+        
+        td {
+            /* border: 1px solid black; */
+            padding: 5px;
+            /* text-align: center; */
+        }
+        
+        thead tr:nth-child(1) {
+            background-color: #2f3640;
+            color: white;
+        }
+        
+        tr td:nth-child(2) {
+            width: 40%;
+            text-align: left;
+        }
+        
+        tr td:nth-child(4) {
+            color: green;
+        }
+        
+        tr {
+            height: 50px;
+            border: 1px solid grey;
+        }
+        
+        tr td:nth-child(1),
+        tr td:nth-child(5) {
+            text-align: center;
+        }
+        
+        tr td:nth-child(5) {
+            width: auto;
+        }
+        
+        thead tr:nth-child(2) td {
+            font-weight: bold;
+            color: black;
+            font-size: 17px;
+        }
+        
+        thead tr:nth-child(2) td:nth-child(1) i {
+            color: black;
+            cursor: unset;
+        }
+        
+        tbody tr:hover {
+            background-color: rgb(246, 244, 244, 0.5);
+        }
+        
+        tbody tr td:nth-child(3) {
+            padding: 20px;
+        }
+        
+        tr td i:nth-child(1):hover {
+            color: rgb(37, 211, 37);
+            cursor: pointer;
+        }
+        
+        tr td i:nth-child(2):hover {
+            color: red;
+            cursor: pointer;
+        }
+        
+        i {
+            padding: 5px;
+            color: grey;
+        }
+        
+        tbody tr td:nth-child(3) a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>

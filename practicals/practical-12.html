@@ -4,7 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Practical-12</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-width: 100%;
+            background-color: lightgray;
+        }
+        
+        table {
+            width: 80%;
+            margin: 100px auto;
+            background-color: white;
+            border-collapse: collapse;
+            border: 5px solid white;
+            padding: 0px 5px;
+        }
+        
+        tr {
+            border-collapse: collapse;
+        }
+        
+        tbody {
+            padding: 10px;
+        }
+        
+        thead tr th {
+            padding: 10px;
+        }
+        
+        tr td {
+            /* border: 1px solid black; */
+            padding: 8px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        tbody tr:nth-child(1) {
+            color: darkorchid;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        
+        tbody tr:nth-child(1) td {
+            padding: 30px;
+        }
+        
+        tbody tr:nth-child(2) td {
+            padding: 15px;
+            color: green;
+            font-weight: 550;
+            font-size: 17px;
+        }
+        
+        button {
+            background-color: rgb(217, 108, 250);
+            color: white;
+            font-size: 18px;
+            padding: 15px 40px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: rgb(202, 69, 243);
+        }
+        
+        .fa-check {
+            color: green;
+        }
+        
+        .fa-times {
+            color: red;
+        }
+        
+        tr:nth-child(odd) td:nth-child(1) {
+            background-color: rgb(202, 251, 202);
+        }
+        
+        tr:nth-child(odd) td:nth-child(2) {
+            background-color: rgb(184, 246, 184);
+        }
+        
+        tr:nth-child(odd) td:nth-child(3) {
+            background-color: rgb(162, 230, 162);
+        }
+        
+        tr:nth-child(odd) td:nth-child(4) {
+            background-color: rgb(181, 208, 212);
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgb(232, 246, 232);
+        }
+        
+        tr td:nth-child(1),
+        tr td:nth-child(2),
+        tr td:nth-child(3) {
+            border-right: 2.5px solid white;
+        }
+    </style>
 </head>
 
 <body>

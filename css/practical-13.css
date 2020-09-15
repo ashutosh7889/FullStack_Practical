@@ -7,11 +7,11 @@
 
 .main_content {
     width: 100%;
-    height: 100px;
+    /* height: 100px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 60px;
     color: grey;
 }
 
@@ -349,7 +349,7 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 40px;
+        font-size: 35px;
         color: grey;
     }
     footer {

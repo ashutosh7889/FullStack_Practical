@@ -16,6 +16,11 @@
     top: 0;
 }
 
+.header .logo {
+    align-items: center;
+    justify-content: center;
+}
+
 .header h1 {
     line-height: 70px;
     color: white;

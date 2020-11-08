@@ -6,8 +6,7 @@ var todoList = document.querySelector(".todo-list");
 
 
 //event handler
-
-todoButton.onclick = create;
+todoButton.onclick = addDivList;
 todoList.onclick = checkdelete;
 
 
@@ -15,7 +14,7 @@ todoList.onclick = checkdelete;
 
 //function
 
-function create(e) {
+function addDivList(e) {
 
     e.preventDefault();
 
@@ -24,20 +23,24 @@ function create(e) {
 
     var newLi = document.createElement("li");
     newLi.classList.add("todo-item");
-    newLi.innerHTML = todoInput.value;
-    newDiv.appendChild(newLi);
+    var data = todoInput.value;
+    if (data != "") {
+        newLi.innerHTML = todoInput.value;
+        newDiv.appendChild(newLi);
+        todoInput.value = "";
 
-    var checkbtn = document.createElement("button");
-    checkbtn.classList.add("check-btn");
-    checkbtn.innerHTML = '<i class="fa fa-check"></i>';
-    newDiv.appendChild(checkbtn);
+        var checkbtn = document.createElement("button");
+        checkbtn.classList.add("check-btn");
+        checkbtn.innerHTML = '<i class="fa fa-check"></i>';
+        newDiv.appendChild(checkbtn);
 
-    var deletebtn = document.createElement("button");
-    deletebtn.classList.add("delete-btn");
-    deletebtn.innerHTML = '<i class="fa fa-trash"></i>';
-    newDiv.appendChild(deletebtn);
+        var deletebtn = document.createElement("button");
+        deletebtn.classList.add("delete-btn");
+        deletebtn.innerHTML = '<i class="fa fa-trash"></i>';
+        newDiv.appendChild(deletebtn);
 
-    todoList.appendChild(newDiv);
+        todoList.appendChild(newDiv);
+    }
 }
 
 function checkdelete(e) {

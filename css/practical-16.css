@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+form {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 10px;
+    border: none;
+    font-size: 24px;
+    background: white;
+    outline: none;
+}
+
+form button {
+    color: blue;
+    background-color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    color: white;
+    background-color: skyblue;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style: none;
+    width: 25%;
+}
+
+.todo {
+    margin: 8px;
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item {
+    flex: 1;
+    margin: 0 80px;
+}
+
+.check-btn,
+.delete-btn {
+    background-color: rgb(19, 211, 121);
+    border: none;
+    outline: none;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background-color: pink;
+}
+
+.fa-check,
+.fa-trash {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}

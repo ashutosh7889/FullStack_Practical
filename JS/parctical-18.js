@@ -1,27 +1,3 @@
-//selectors
-// const form = document.getElementById('form');
-// const username = document.getElementById('username');
-// const email = document.getElementById('email');
-// const password1 = document.getElementById('password1');
-// const password2 = document.getElementById('password2');
-// const small = document.getElementById('small');
-
-
-//Event HAndlers
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-
-//     checkInput();
-
-// })
-
-//functions
-
-// function checkInput()
-
-
-
-
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');

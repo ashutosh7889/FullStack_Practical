@@ -20,6 +20,7 @@ body {
     border-radius: 10px;
     background-color: #fff;
     position: relative;
+    overflow: hidden;
 }
 
 .container form {
@@ -27,6 +28,7 @@ body {
     left: 40px;
     top: 80px;
     width: 280px;
+    transition: 0.5s;
 }
 
 form h3 {
@@ -88,6 +90,7 @@ form button {
     height: 100%;
     background-color: crimson;
     position: absolute;
+    transition: 1s;
 }
 
 #progress::after {
